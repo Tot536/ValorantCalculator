@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valorant Average Rank Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-card">
+        <p class="eyebrow">Tournament Tool</p>
+        <h1>Valorant Average Rank Calculator</h1>
+        <p class="hero-copy">
+          Build a full five-player roster, calculate the team average, and export a secure tournament submission file.
+        </p>
+      </section>
+
+      <section class="calculator-card">
+        <div class="card-header">
+          <div>
+            <p class="section-label">Team Setup</p>
+            <h2>Enter your team details</h2>
+          </div>
+          <button id="resetButton" class="ghost-button" type="button">
+            Reset
+          </button>
+        </div>
+
+        <div class="meta-grid">
+          <label class="meta-card">
+            <span>Team Name</span>
+            <input
+              id="teamName"
+              name="teamName"
+              type="text"
+              maxlength="32"
+              placeholder="Night Shift"
+              autocomplete="off"
+            />
+          </label>
+          <div class="meta-card meta-copy">
+            <span>Secure Download</span>
+            <p>
+              Submissions are encrypted in-browser before download. Only the tournament organizer can decrypt them.
+            </p>
+          </div>
+        </div>
+
+        <form id="rankForm" class="rank-grid">
+          <label class="player-card">
+            <span>Player 1</span>
+            <input
+              class="riot-input"
+              name="player1Name"
+              type="text"
+              maxlength="24"
+              placeholder="Example#EU1"
+              autocomplete="off"
+            />
+            <select name="player1"></select>
+          </label>
+          <label class="player-card">
+            <span>Player 2</span>
+            <input
+              class="riot-input"
+              name="player2Name"
+              type="text"
+              maxlength="24"
+              placeholder="Example#EU1"
+              autocomplete="off"
+            />
+            <select name="player2"></select>
+          </label>
+          <label class="player-card">
+            <span>Player 3</span>
+            <input
+              class="riot-input"
+              name="player3Name"
+              type="text"
+              maxlength="24"
+              placeholder="Example#EU1"
+              autocomplete="off"
+            />
+            <select name="player3"></select>
+          </label>
+          <label class="player-card">
+            <span>Player 4</span>
+            <input
+              class="riot-input"
+              name="player4Name"
+              type="text"
+              maxlength="24"
+              placeholder="Example#EU1"
+              autocomplete="off"
+            />
+            <select name="player4"></select>
+          </label>
+          <label class="player-card">
+            <span>Player 5</span>
+            <input
+              class="riot-input"
+              name="player5Name"
+              type="text"
+              maxlength="24"
+              placeholder="Example#EU1"
+              autocomplete="off"
+            />
+            <select name="player5"></select>
+          </label>
+        </form>
+
+        <div class="results-panel">
+          <div class="result-box">
+            <p class="result-label">Average Number</p>
+            <strong id="averageValue">0.0</strong>
+          </div>
+          <div class="result-box accent">
+            <p class="result-label">Estimated Team Rank</p>
+            <strong id="averageRank">Select all ranks</strong>
+          </div>
+        </div>
+
+        <div class="submission-panel">
+          <button id="downloadButton" class="primary-button" type="button">
+            Download Encrypted Submission
+          </button>
+          <p id="statusMessage" class="status-message">
+            Fill in all players and ranks to create a secure submission file.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
